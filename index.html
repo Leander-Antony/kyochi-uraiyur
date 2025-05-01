@@ -145,15 +145,17 @@
 
     <div class="pt-2">
       <section id="home" class="hero">
-        <h2>Kyochi Foot Reflexology</h2>
-        <p>
-          <span id="imp"><em>by the visually impaired</em></span>
-        </p>
-        <p>
-          Refresh mind, body and soul with a healing touch from our visually
-          impaired therapists.
-        </p>
-        <a href="https://wa.me/918438167590" target="_blank">Contact Now</a>
+        <div class="bg">
+          <h2>Kyochi Foot Reflexology</h2>
+          <p>
+            <span id="imp"><em>by the visually impaired</em></span>
+          </p>
+          <p>
+            Refresh mind, body and soul with a healing touch from our visually
+            impaired therapists.
+          </p>
+          <a href="https://wa.me/918438167590" target="_blank">Contact Now</a>
+        </div>
       </section>
 
       <section id="about">
@@ -439,6 +441,47 @@
       btn.addEventListener("click", () => {
         menu.classList.toggle("show");
       });
+    </script>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+            } else {
+              entry.target.classList.remove("animate"); // to allow retrigger
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+        }
+      );
+
+      const aboutText = document.querySelector(".about-text");
+      const aboutImage = document.querySelector(".about-image");
+
+      if (aboutText) observer.observe(aboutText);
+      if (aboutImage) observer.observe(aboutImage);
+
+      const servicesObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const cards = document.querySelectorAll(".service-card");
+            if (entry.isIntersecting) {
+              cards.forEach((card) => card.classList.add("animate"));
+            } else {
+              cards.forEach((card) => card.classList.remove("animate")); // retriggering allowed
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      const servicesContainer = document.querySelector(".services-container");
+      if (servicesContainer) servicesObserver.observe(servicesContainer);
     </script>
   </body>
 </html>
