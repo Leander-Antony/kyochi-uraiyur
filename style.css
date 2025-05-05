@@ -293,16 +293,16 @@ section {
 }
 
 .service-card {
-  height: 250px;
+  flex: 1 1 calc(33.333% - 2rem);
+  min-width: 300px;
+  max-width: 500px;
+  height: 550px; /* Fixed exact height */
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
-  padding: 1rem 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -312,10 +312,17 @@ section {
 }
 
 .text-content {
-  flex: 2;
+  height: 300px; /* Fixed text height */
+  padding: 1.5rem;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: none; /* Remove flex behavior */
+}
+
+.text-content h3 {
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* Prevent title from shrinking */
 }
 
 .image-content {
@@ -390,7 +397,7 @@ section {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: fit-content;  /* Changed from auto */
 }
 
 @media (max-width: 1200px) {
@@ -422,10 +429,8 @@ section {
 
 .service-image {
   width: 100%;
-  height: 300px;  /* Fixed height for all images */
-  overflow: hidden;
-  position: relative;
-  background: #f5f5f5;
+  height: 250px; /* Fixed image height */
+  flex: 0 0 auto; /* Prevent any flex growth/shrink */
 }
 
 .service-image img {
@@ -448,16 +453,17 @@ section {
 }
 
 .text-content {
-  padding: 1.9rem;  /* Reduced from 2rem */
-  flex: 1.2;  /* Reduced from 1 to give more space to image */
+  height: 300px; /* Fixed text height */
+  padding: 1.5rem;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: none; /* Remove flex behavior */
 }
 
 .text-content h3 {
-  font-size: 1.25rem;  /* Reduced from 1.5rem */
-  margin-bottom: 0.75rem;  /* Reduced from 1rem */
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* Prevent title from shrinking */
 }
 
 .text-content p {
@@ -467,8 +473,8 @@ section {
 }
 
 .center-card {
-  grid-column: 2;
-  max-width: 100%;
+  flex: 1 1 calc(33.333% - 2rem);  /* Match other cards */
+  max-width: 500px;  /* Match other cards */
 }
 
 @media (max-width: 1200px) {
@@ -520,6 +526,12 @@ section {
   .text-content {
     padding: 1rem;
     height: auto;
+  }
+
+  .center-card {
+    flex: 1 1 100%;
+    margin: 0 1rem;
+    min-width: unset;
   }
 }
 
