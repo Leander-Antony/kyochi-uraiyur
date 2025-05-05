@@ -370,26 +370,49 @@ section {
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  padding: 4rem 2rem;  /* Reduced horizontal padding */
-  max-width: 1600px;  /* Increased from 1400px */
-  margin: 0 auto 0 0;  /* Changed to align left */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .service-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  min-width: 300px;
+  max-width: 500px;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  height: 600px;  /* Increased from 450px */
-  width: 100%;    /* Ensures full width within grid cell */
-  min-width: 550px; /* Minimum width for each card */
   display: flex;
   flex-direction: column;
-  margin-left: 0;  /* Remove negative margin */
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .service-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    padding: 1rem;
+  }
+  
+  .service-card {
+    flex: 1 1 100%;
+    margin: 0 1rem;
+    min-width: unset;
+  }
+
+  .service-image {
+    height: 250px;
+  }
 }
 
 .service-card:hover {
@@ -472,62 +495,47 @@ section {
     grid-template-columns: 1fr;
     padding: 0.5rem;
     margin: 0;
-    width: 98%;
+    width: 100vw;
+    max-width: 100%;
   }
   
   .service-card {
     min-width: unset;
-    width: 100%;
-    max-width: 900px;
+    width: calc(100% - 1rem);
+    max-width: none;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     border-radius: 15px;
   }
 
   #services {
-    padding: 2rem 0.5rem;
+    padding: 2rem 0;
   }
-  
-  .services-grid {
-    grid-template-columns: 1fr;
+
+  .service-image {
+    height: 35vh;  /* Responsive height based on viewport */
+    min-height: 200px;
+  }
+
+  .text-content {
     padding: 1rem;
-    margin: 0 auto;
-    width: 95%; /* Added to control overall width */
-  }
-  
-  .service-card {
-    min-width: unset;
-    width: 100%; /* Changed from 550px to fill available space */
-    max-width: 800px; /* Added maximum width */
     height: auto;
-    margin: 0 auto; /* Center the card */
   }
+}
 
-  .services-container {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow-y: auto;
-    max-height: 100vh; /* optional: controls scroll height */
-    padding-right: 1rem; /* optional: avoids cutting off scrollbar */
-    padding-top: 2rem;
-  }
-
-  .service-card {
+@media (max-width: 480px) {
+  .services-grid {
     width: 100%;
-    flex-direction: column;
-    height: auto;
-    text-align: center;
+    padding: 0.25rem;
   }
 
-  .image-content img {
-    width: 80px;
-    height: 80px;
-    margin-top: 1rem;
+  .service-card {
+    width: calc(100% - 0.5rem);
   }
 
-  .left-border,
-  .right-border {
-    border: none;
+  .service-image {
+    height: 30vh;
+    min-height: 180px;
   }
 }
 
