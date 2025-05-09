@@ -639,7 +639,76 @@ section {
   }
 }
 
+.why-choose-us {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fffaf0;
+  color: #beada0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  justify-content: center;
+}
+
+.feature-box {
+  flex: 0 1 250px;
+  background: #fffaf0;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.411);
+  transition: all 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-box .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e7ab1f;
+}
+
+.feature-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #e7ab1f;
+}
+
+.feature-box p {
+  font-size: 0.85rem;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .feature-box {
+    flex: 0 1 220px;
+    padding: 1.25rem;
+    min-height: 180px;
+  }
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+
+}
 
 #gallery {
   background-color: #2b2b2b;
@@ -664,7 +733,7 @@ section {
 
 #contact a {
   margin-top: 8px;
-  text-decoration: none;
+  text-decoration: none !important;
   display: block;
   color: inherit;
 }
@@ -679,18 +748,15 @@ section {
   margin-top: 20px;
   font-size: 16px;
   font-weight: bold;
-}
-
-#contact .contact-now:hover {
-  background-color: #6a5e55;
-  transform: translateY(-5px);
+  text-decoration: none !important;
 }
 
 #contact .phone {
   color: #2b6cb0;
-  text-decoration: underline;
+  text-decoration: none;
   margin-top: 1rem;
   font-size: 18px;
+  border-bottom: 1px solid #2b6cb0;
 }
 
 .contact-container {
