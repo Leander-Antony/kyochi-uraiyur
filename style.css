@@ -293,16 +293,16 @@ section {
 }
 
 .service-card {
-  height: 250px;
+  flex: 1 1 calc(33.333% - 2rem);
+  min-width: 300px;
+  max-width: 500px;
+  height: 550px; /* Fixed exact height */
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
-  padding: 1rem 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -312,10 +312,17 @@ section {
 }
 
 .text-content {
-  flex: 2;
+  height: 300px; /* Fixed text height */
+  padding: 1.5rem;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: none; /* Remove flex behavior */
+}
+
+.text-content h3 {
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* Prevent title from shrinking */
 }
 
 .image-content {
@@ -369,44 +376,198 @@ section {
   animation: fadeInUpCard 0.8s ease-out forwards;
 }
 
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.service-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  min-width: 300px;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;  /* Changed from auto */
+}
+
+@media (max-width: 1200px) {
+  .service-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
 
 @media (max-width: 768px) {
-  .services-container {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow-y: auto;
-    max-height: 100vh; /* optional: controls scroll height */
-    padding-right: 1rem; /* optional: avoids cutting off scrollbar */
-    padding-top: 2rem;
+  .services-grid {
+    padding: 1rem;
+  }
+  
+  .service-card {
+    flex: 1 1 100%;
+    margin: 0 1rem;
+    min-width: unset;
+  }
+
+  .service-image {
+    height: 250px;
+  }
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(231, 171, 31, 0.2);
+}
+
+.service-image {
+  width: 100%;
+  height: 250px; /* Fixed image height */
+  flex: 0 0 auto; /* Prevent any flex growth/shrink */
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;  /* Ensure full height */
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+/* Specific fix for nasal reflexology image */
+[alt="Nasal Reflexology service"] {
+  object-position: top center;  /* Adjust vertical position */
+  transform: scale(1.1);  /* Slight scale up to match other images */
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+.text-content {
+  height: 300px; /* Fixed text height */
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: none; /* Remove flex behavior */
+}
+
+.text-content h3 {
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* Prevent title from shrinking */
+}
+
+.text-content p {
+  font-size: 0.9rem;  /* Reduced from default */
+  line-height: 1.4;  /* Reduced from 1.6 */
+  margin-bottom: 1rem;  /* Reduced from 1.5rem */
+}
+
+.center-card {
+  flex: 1 1 calc(33.333% - 2rem);  /* Match other cards */
+  max-width: 500px;  /* Match other cards */
+}
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+  .center-card {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .center-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    margin: 0;
+    width: 100vw;
+    max-width: 100%;
+  }
+  
+  .service-card {
+    min-width: unset;
+    width: calc(100% - 1rem);
+    max-width: none;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+
+  #services {
+    padding: 2rem 0;
+  }
+
+  .service-image {
+    height: 35vh;  /* Responsive height based on viewport */
+    min-height: 200px;
+  }
+
+  .text-content {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .center-card {
+    flex: 1 1 100%;
+    margin: 0 1rem;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    width: 100%;
+    padding: 0.25rem;
   }
 
   .service-card {
-    width: 100%;
-    flex-direction: column;
-    height: auto;
-    text-align: center;
+    width: calc(100% - 0.5rem);
   }
 
-  .image-content img {
-    width: 80px;
-    height: 80px;
-    margin-top: 1rem;
+  .service-image {
+    height: 30vh;
+    min-height: 180px;
   }
+}
 
-  .left-border,
-  .right-border {
-    border: none;
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
   .service-card {
-    padding: 1rem;
+    border-radius: 15px;
   }
 
-  .image-content img {
-    width: 70px;
-    height: 70px;
+  .service-image {
+    height: 180px;  /* Even smaller for very small screens */
+  }
+
+  .text-content {
+    padding: 1rem;
   }
 }
 
