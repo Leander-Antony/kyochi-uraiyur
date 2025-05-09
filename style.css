@@ -571,6 +571,76 @@ section {
   }
 }
 
+/* benefits.css */
+
+.benefits-section {
+  padding: 4rem 1rem;
+  background-color: #fffaf0;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "PT Serif", serif;
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.benefit-card { /* Tailwind's bg-gray-800 */
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.benefit-card:hover {
+  transform: scale(1.05);
+
+}
+
+.svg-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+
+.benefit-card h3 {
+  font-size: 1rem;
+  color: #e7ab1f;
+  margin: 0;
+  padding-bottom: 35px;
+}
+
+@media (max-width: 640px) {
+  .benefits-container {
+    justify-content: center;
+  }
+
+  .benefit-card {
+    width: calc(50% - 1rem); /* Two cards in a row with spacing */
+  }
+}
+
+
+
 #gallery {
   background-color: #2b2b2b;
 }
