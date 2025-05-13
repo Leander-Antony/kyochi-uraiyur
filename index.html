@@ -101,16 +101,16 @@
     <nav>
       <div class="nav-container">
         <div class="brand">
-          <img src="images/logo.jpg" alt="Logo" />
-          <p>Woraiyur</p>
+          <img src="images/logo.png" alt="Logo" />
+          <span class="brand-text">Kyochi</span>
         </div>
 
         <div class="nav-links" id="desktop-nav">
           <a href="#home">Home</a>
-          <a href="#about">About</a>
+          <a href="#about">About Us</a>
           <a href="#services">Services</a>
           <a href="#gallery">Gallery</a>
-          <a href="#contact" class="contact-btn">Contact Now</a>
+          <a href="#contact">Contact</a>
         </div>
 
         <button id="menu-btn" class="mobile-menu-btn">
@@ -132,29 +132,78 @@
         </button>
       </div>
 
+      <div class="nav-info">
+        <div class="nav-info-item">
+          <i>📞</i>
+          <span>+91 84381 67590</span>
+        </div>
+        <div class="nav-info-item">
+          <i>✉️</i>
+          <span>info@kyochi.in</span>
+        </div>
+        <div class="nav-info-item">
+          <i>🕒</i>
+          <span>Mon-Sat: 9:00 AM - 9:00 PM</span>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <div class="social-row">
+          <a href="#" target="_blank"><i>📱</i> Facebook</a>
+          <a href="#" target="_blank"><i>📸</i> Instagram</a>
+        </div>
+        <div class="social-row">
+          <a href="#" target="_blank"><i>▶️</i> YouTube</a>
+          <a href="#" target="_blank"><i>💬</i> WhatsApp</a>
+        </div>
+      </div>
+
       <div id="mobile-menu" class="mobile-menu">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#about">About Us</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
-        <a href="https://wa.me/918438167590" target="_blank"
-          >Contact Now (WhatsApp)</a
-        >
+        <a href="#contact">Contact</a>
       </div>
     </nav>
 
     <div class="pt-2">
-      <section id="home" class="hero">
-        <div class="bg">
-          <h2>Kyochi Foot Reflexology</h2>
-          <p>
-            <span id="imp"><em>by the visually impaired</em></span>
-          </p>
-          <p>
-            Refresh mind, body and soul with a healing touch from our visually
-            impaired therapists.
-          </p>
-          <a href="https://wa.me/918438167590" target="_blank">Contact Now</a>
+      <section id="home" class="hero-section">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/hero.webp" alt="Reflexology Service">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Kyochi Foot Reflexology</h1>
+                            <p class="hero-subtitle">Experience healing through touch by the visually impaired</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="images/image1.webp" alt="Relaxation Therapy">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Natural Healing</h1>
+                            <p class="hero-subtitle">Restore balance and harmony to your body</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="images/de-stress.jpeg" alt="De-stress Service">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Expert Care</h1>
+                            <p class="hero-subtitle">Professional therapy by skilled practitioners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
       </section>
 
@@ -530,7 +579,7 @@
 
 
 
-      <section id="contact">
+      <section id="contact"></section>
         <div class="contact-container">
           <div class="contact-map">
             <iframe
@@ -575,7 +624,7 @@
       </div>
     </footer>
 
-    <script>
+    <script></script>
       const btn = document.getElementById("menu-btn");
       const menu = document.getElementById("mobile-menu");
       btn.addEventListener("click", () => {
