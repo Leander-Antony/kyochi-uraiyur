@@ -5,8 +5,10 @@
 }
 
 :root {
-  --font-cursive: "Dancing Script", cursive;
-  --font-serif: "PT Serif", serif;
+  --font-cursive: "Allura", cursive;
+  --font-serif: "Noto Serif", serif;
+  --font-heading: "Volkhov", serif;
+  --font-body: "Lato", sans-serif;
 }
 
 /* dancin script (cursive),   pt serif(other) */
@@ -18,19 +20,21 @@ body {
 
 h1,
 h2 {
-  font-family: var(--font-cursive);
+  font-family: var(--font-heading);
   font-size: 2.5rem;
   color: #e7ab1f;
   text-align: center;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   color: #e7ab1f;
   text-align: center;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 nav {
