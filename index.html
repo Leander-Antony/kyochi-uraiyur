@@ -560,7 +560,7 @@
 
 
 
-      <section id="contact"></section>
+      <section id="contact">
         <div class="contact-container">
           <div class="contact-map">
             <iframe
@@ -603,7 +603,7 @@
       <div class="footer-bottom">
         <p>&copy; 2025 Kyochi Reflexology. All rights reserved.</p>
       </div>
-    </footer>
+    </footer> 
 
     <script></script>
       const btn = document.getElementById("menu-btn");
@@ -652,6 +652,31 @@
 
       const servicesContainer = document.querySelector(".services-container");
       if (servicesContainer) servicesObserver.observe(servicesContainer);
+    </script>
+    <script>
+      const hamburger = document.querySelector('.hamburger-menu');
+      const nav = document.querySelector('nav');
+      
+      hamburger.addEventListener('click', () => {
+        nav.classList.toggle('menu-open');
+      });
+    </script>
+    <script>
+      const navMenu = document.getElementById('nav-menu'),
+            navToggle = document.getElementById('nav-toggle'),
+            navClose = document.getElementById('nav-close')
+
+      if(navToggle) {
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.add('show-menu')
+        })
+      }
+
+      if(navClose) {
+        navClose.addEventListener('click', () => {
+          navMenu.classList.remove('show-menu')
+        })
+      }
     </script>
   </body>
 </html>
