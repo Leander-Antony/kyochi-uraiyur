@@ -57,6 +57,9 @@
     <link rel="icon" type="image/x-icon" href="images/logo.ico" />
 
     <!-- CSS and Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Baumans&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Emblema+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=PT+Serif&display=swap"
@@ -101,16 +104,16 @@
     <nav>
       <div class="nav-container">
         <div class="brand">
-          <img src="images/logo.jpg" alt="Logo" />
-          <p>Woraiyur</p>
+          <img src="images/logo.png" alt="Logo" />
+          <span class="brand-text">Kyochi</span>
         </div>
 
         <div class="nav-links" id="desktop-nav">
           <a href="#home">Home</a>
-          <a href="#about">About</a>
+          <a href="#about">About Us</a>
           <a href="#services">Services</a>
           <a href="#gallery">Gallery</a>
-          <a href="#contact" class="contact-btn">Contact Now</a>
+          <a href="#contact">Contact</a>
         </div>
 
         <button id="menu-btn" class="mobile-menu-btn">
@@ -132,18 +135,43 @@
         </button>
       </div>
 
+      <div class="nav-info">
+        <div class="nav-info-item">
+          <i>📞</i>
+          <span>+91 84381 67590</span>
+        </div>
+        <div class="nav-info-item">
+          <i>✉️</i>
+          <span>info@kyochi.in</span>
+        </div>
+        <div class="nav-info-item">
+          <i>🕒</i>
+          <span>Mon-Sat: 9:00 AM - 9:00 PM</span>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <div class="social-row">
+          <a href="#" target="_blank"><i>📱</i> Facebook</a>
+          <a href="#" target="_blank"><i>📸</i> Instagram</a>
+        </div>
+        <div class="social-row">
+          <a href="#" target="_blank"><i>▶️</i> YouTube</a>
+          <a href="#" target="_blank"><i>💬</i> WhatsApp</a>
+        </div>
+      </div>
+
       <div id="mobile-menu" class="mobile-menu">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#about">About Us</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
-        <a href="https://wa.me/918438167590" target="_blank"
-          >Contact Now (WhatsApp)</a
-        >
+        <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    <div class="pt-2">
+
+      <div class="pt-2">
       <section id="home" class="hero">
         <div class="bg">
           <h2>Kyochi Foot Reflexology</h2>
@@ -158,6 +186,8 @@
         </div>
       </section>
 
+
+    
       <section id="about">
         <div class="about-container">
           <div class="about-text">
@@ -573,9 +603,9 @@
       <div class="footer-bottom">
         <p>&copy; 2025 Kyochi Reflexology. All rights reserved.</p>
       </div>
-    </footer>
+    </footer> 
 
-    <script>
+    <script></script>
       const btn = document.getElementById("menu-btn");
       const menu = document.getElementById("mobile-menu");
       btn.addEventListener("click", () => {
@@ -622,6 +652,31 @@
 
       const servicesContainer = document.querySelector(".services-container");
       if (servicesContainer) servicesObserver.observe(servicesContainer);
+    </script>
+    <script>
+      const hamburger = document.querySelector('.hamburger-menu');
+      const nav = document.querySelector('nav');
+      
+      hamburger.addEventListener('click', () => {
+        nav.classList.toggle('menu-open');
+      });
+    </script>
+    <script>
+      const navMenu = document.getElementById('nav-menu'),
+            navToggle = document.getElementById('nav-toggle'),
+            navClose = document.getElementById('nav-close')
+
+      if(navToggle) {
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.add('show-menu')
+        })
+      }
+
+      if(navClose) {
+        navClose.addEventListener('click', () => {
+          navMenu.classList.remove('show-menu')
+        })
+      }
     </script>
   </body>
 </html>
