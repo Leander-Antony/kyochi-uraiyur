@@ -187,50 +187,110 @@
     <!-- Overlay for mobile menu -->
     <div class="overlay"></div>
 
-      <div class="pt-2">
-      <section id="home" class="hero">
-        <div class="bg">
-          <h2>Kyochi Foot Reflexology</h2>
-          <p>
-            <span id="imp"><em>by the visually impaired</em></span>
-          </p>
-          <p>
-            Refresh mind, body and soul with a healing touch from our visually
-            impaired therapists.
-          </p>
-          <a href="https://wa.me/918438167590" target="_blank">Contact Now</a>
+<section class="hero-section">
+        <!-- Background Images -->
+        <div class="background-image active" data-slide="0">
+            <div class="ken-burns-container">
+                <img src="images/heroo.jpg" alt="">
+            </div>
+            <div class="overlay"></div>
         </div>
-      </section>
-
-
-    
-      <section id="about">
-        <div class="about-container">
-          <div class="about-text">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem, font-st">
-              About Us
-            </h2>
-            <p>
-              Holistic wellness center specializing in natural healing through
-              the art of foot reflexology, delivered by highly skilled visually
-              impaired therapists. We provide a wide range of therapies tailored
-              to address specific concerns, including stress relief, body
-              relaxation, foot acupressure therapy, chronic pain management, and
-              detoxification. <br /><br />
-              We believe in the body's innate ability to heal itself and adopt a
-              holistic approach to enhance this process. With a team of expert
-              therapists and a serene ambiance, we are dedicated to delivering
-              an exceptional therapeutic experience that promotes calmness,
-              balance, and rejuvenation.
-            </p>
-          </div>
-          <div class="about-image">
-            <img src="images/image1.webp" alt="Reflexology therapy" />
-          </div>
+        
+        <div class="background-image" data-slide="1">
+            <div class="ken-burns-container">
+                <img src="images/heroo.jpg" alt="">
+            </div>
+            <div class="overlay"></div>
         </div>
-      </section>
+        
+        <div class="background-image" data-slide="2">
+            <div class="ken-burns-container">
+                <img src="images/heroo.jpg" alt="">
+            </div>
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="background-image" data-slide="3">
+            <div class="ken-burns-container">
+                <img src="images/heroo.jpg" alt="">
+            </div>
+            <div class="overlay"></div>
+        </div>
 
-      <section id="services">
+        <!-- Content -->
+        <div class="slide-content active" data-content="0">
+            <h1 class="title">Kyochi Foot Reflexology</h1>
+            <p class="subtitle">Ancient Healing, Modern Wellness</p>
+            <blockquote class="quote">
+                Experience the therapeutic power of traditional foot reflexology for complete mind-body balance.
+            </blockquote>
+        </div>
+
+        <div class="slide-content" data-content="1">
+            <h1 class="title">Therapeutic Treatments</h1>
+            <p class="subtitle">Healing Through Touch</p>
+            <blockquote class="quote">
+                Professional reflexology sessions targeting pressure points to promote natural healing and relaxation.
+            </blockquote>
+        </div>
+
+        <div class="slide-content" data-content="2">
+            <h1 class="title">Personalized Sessions</h1>
+            <p class="subtitle">Tailored to Your Wellness</p>
+            <blockquote class="quote">
+                Custom treatment plans designed to address your specific health concerns and wellness goals.
+            </blockquote>
+        </div>
+
+        <div class="slide-content" data-content="3">
+            <h1 class="title">Certified Practitioners</h1>
+            <p class="subtitle">Expert Care & Comfort</p>
+            <blockquote class="quote">
+                Licensed reflexologists providing safe, effective treatments in a tranquil healing environment.
+            </blockquote>
+        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicators -->
+        <div class="indicators">
+            <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+            <button class="indicator" data-slide="3" aria-label="Go to slide 4"></button>
+        </div>
+    </section>
+
+    <!-- Removing hero section -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem, font-st">
+            About Us
+          </h2>
+          <p>
+            Holistic wellness center specializing in natural healing through
+            the art of foot reflexology, delivered by highly skilled visually
+            impaired therapists. We provide a wide range of therapies tailored
+            to address specific concerns, including stress relief, body
+            relaxation, foot acupressure therapy, chronic pain management, and
+            detoxification. <br /><br />
+            We believe in the body's innate ability to heal itself and adopt a
+            holistic approach to enhance this process. With a team of expert
+            therapists and a serene ambiance, we are dedicated to delivering
+            an exceptional therapeutic experience that promotes calmness,
+            balance, and rejuvenation.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="images/image1.webp" alt="Reflexology therapy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
         <h2 style="font-size: 2rem">Our Services</h2>
         <div class="services-grid">
           <!-- Relaxation Card -->
@@ -649,6 +709,97 @@
                       document.body.style.overflow = 'auto';
                   });
               });
+
+         class HeroSlider {
+            constructor() {
+                this.currentSlide = 0;
+                this.isAnimating = false;
+                this.slideTimeout = null;
+                this.totalSlides = 4;
+                
+                this.backgroundImages = document.querySelectorAll('.background-image');
+                this.slideContents = document.querySelectorAll('.slide-content');
+                this.indicators = document.querySelectorAll('.indicator');
+                
+                this.init();
+            }
+
+            init() {
+                // Add event listeners to indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Start auto-slide
+                this.startSlideTimer();
+            }
+
+            startSlideTimer() {
+                if (this.slideTimeout) {
+                    clearTimeout(this.slideTimeout);
+                }
+
+                this.slideTimeout = setTimeout(() => {
+                    this.nextSlide();
+                }, 5000);
+            }
+
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+                this.goToSlide(nextIndex);
+            }
+
+            goToSlide(index) {
+                if (this.currentSlide === index || this.isAnimating) return;
+
+                this.isAnimating = true;
+
+                // Add animating class
+                this.backgroundImages[this.currentSlide].classList.add('animating');
+                this.slideContents[this.currentSlide].classList.add('animating');
+                this.indicators.forEach(indicator => indicator.classList.add('animating'));
+
+                setTimeout(() => {
+                    // Remove active classes from current slide
+                    this.backgroundImages[this.currentSlide].classList.remove('active');
+                    this.slideContents[this.currentSlide].classList.remove('active');
+                    this.indicators[this.currentSlide].classList.remove('active');
+
+                    // Update current slide
+                    this.currentSlide = index;
+
+                    // Add active classes to new slide
+                    this.backgroundImages[this.currentSlide].classList.add('active');
+                    this.slideContents[this.currentSlide].classList.add('active');
+                    this.indicators[this.currentSlide].classList.add('active');
+
+                    // Remove animating classes
+                    this.backgroundImages.forEach(img => img.classList.remove('animating'));
+                    this.slideContents.forEach(content => content.classList.remove('animating'));
+                    this.indicators.forEach(indicator => indicator.classList.remove('animating'));
+
+                    this.isAnimating = false;
+
+                    // Restart timer
+                    this.startSlideTimer();
+                }, 1000);
+            }
+        }
+
+        // Initialize the slider when DOM is loaded
+           document.addEventListener('DOMContentLoaded', () => {
+            new HeroSlider();
+        });
+
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 </html>
