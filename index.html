@@ -99,56 +99,74 @@
         }
       }
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-  <header class="header">
-        <div class="logo-container">
-            <img src="/images/logo.png"Kyochi Foot Reflexology Logo" class="logo">
-        </div>
-        
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="/images/logo.png" alt="Kyochi Foot Reflexology Logo" class="logo">
+            </div>
             
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i>📞</i>
-                    <span>+91 84381 67590</span>
-                </div>
-                
-                <div class="contact-item">
-                    <i>✉️</i>
-                    <span>info@kyochi.in</span>
-                </div>
-                
-                <div class="contact-item">
-                    <i>🕒</i>
-                    <span>Mon-Sat: 9:00 AM - 9:00 PM</span>
+            <nav class="nav-section">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about" style="white-space: nowrap;">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="contact-section">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                        <span>+91 84381 67590</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa fa-envelope"></i></span>
+                        <span>info@kyochi.in</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa fa-clock"></i></span>
+                        <span>Mon-Sat: 9:00 AM - 9:00 PM</span>
+                    </div>
                 </div>
             </div>
+            
+            <div class="social-section">
+                <div class="social-container">
+                    <a href="#" class="social-link">
+                        <span class="social-icon"><i class="fab fa-facebook"></i></span>
+                        Facebook
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                        Instagram
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="social-icon"><i class="fab fa-youtube"></i></span>
+                        YouTube
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="social-icon"><i class="fab fa-whatsapp"></i></span>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <button class="hamburger">☰</button>
         </div>
-        
-        <div class="social-container">
-            <a href="#" class="social-link" aria-label="Facebook">📘 Facebook</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷 Instagram</a>
-            <a href="#" class="social-link" aria-label="YouTube">📹 YouTube</a>
-            <a href="#" class="social-link" aria-label="WhatsApp">📱 WhatsApp</a>
-        </div>
-        
-        <!-- Hamburger button for mobile -->
-        <button class="hamburger">☰</button>
     </header>
     
     <!-- Mobile sidebar menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-header">
-            <img src="/images/logo.png alt="Kyochi Logo" class="mobile-logo">
-            <button class="close-menu">✕</button>
+            <img src="/images/logo.png" alt="Kyochi Logo" class="mobile-logo">
+            <button class="close-menu" aria-label="Close menu">✕</button>
         </div>
         
         <ul class="mobile-links">
@@ -161,79 +179,145 @@
         
         <div class="mobile-contact">
             <div class="contact-item">
-                <i>📞</i>
+                <span class="contact-icon"><i class="fa fa-phone"></i></span>
                 <span>+91 84381 67590</span>
             </div>
-            
             <div class="contact-item">
-                <i>✉️</i>
+                <span class="contact-icon"><i class="fa fa-envelope"></i></span>
                 <span>info@kyochi.in</span>
             </div>
-            
             <div class="contact-item">
-                <i>🕒</i>
+                <span class="contact-icon"><i class="fa fa-clock"></i></span>
                 <span>Mon-Sat: 9:00 AM - 9:00 PM</span>
             </div>
         </div>
         
-        <div class="mobile-social" style="display: grid; grid-template-columns: repeat(2, auto); gap: 10px;">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="YouTube">📹</a>
-            <a href="#" class="social-link" aria-label="WhatsApp">📱</a>
+        <div class="mobile-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+                <span class="social-icon"><i class="fa-brands fa-facebook"></i></span>
+                Facebook
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+                <span class="social-icon"><i class="fa-brands fa-instagram"></i></span>
+                Instagram
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+                <span class="social-icon"><i class="fa-brands fa-youtube"></i></span>
+                YouTube
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+                <span class="social-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                WhatsApp
+            </a>
         </div>
     </div>
-    
-    <!-- Overlay for mobile menu -->
+
     <div class="overlay"></div>
 
-      <div class="pt-2">
-      <section id="home" class="hero">
-        <div class="bg">
-          <h2>Kyochi Foot Reflexology</h2>
-          <p>
-            <span id="imp"><em>by the visually impaired</em></span>
-          </p>
-          <p>
-            Refresh mind, body and soul with a healing touch from our visually
-            impaired therapists.
-          </p>
-          <a href="https://wa.me/918438167590" target="_blank">Contact Now</a>
+<section class="hero-section">
+        <div class="background-image active" data-slide="0">
+            <div class="ken-burns-container">
+                <img src="images/1.png" alt="">
+            </div>
+            <div class="overlay"></div>
         </div>
-      </section>
-
-
-    
-      <section id="about">
-        <div class="about-container">
-          <div class="about-text">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem, font-st">
-              About Us
-            </h2>
-            <p>
-              Holistic wellness center specializing in natural healing through
-              the art of foot reflexology, delivered by highly skilled visually
-              impaired therapists. We provide a wide range of therapies tailored
-              to address specific concerns, including stress relief, body
-              relaxation, foot acupressure therapy, chronic pain management, and
-              detoxification. <br /><br />
-              We believe in the body's innate ability to heal itself and adopt a
-              holistic approach to enhance this process. With a team of expert
-              therapists and a serene ambiance, we are dedicated to delivering
-              an exceptional therapeutic experience that promotes calmness,
-              balance, and rejuvenation.
-            </p>
-          </div>
-          <div class="about-image">
-            <img src="images/image1.webp" alt="Reflexology therapy" />
-          </div>
+        
+        <div class="background-image" data-slide="1">
+            <div class="ken-burns-container">
+                <img src="images/2.png" alt="">
+            </div>
+            <div class="overlay"></div>
         </div>
-      </section>
+        
+        <div class="background-image" data-slide="2">
+            <div class="ken-burns-container">
+                <img src="images/3.png" alt="">
+            </div>
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="background-image" data-slide="3">
+            <div class="ken-burns-container">
+                <img src="images/4.png" alt="">
+            </div>
+            <div class="overlay"></div>
+        </div>
 
-      <section id="services">
+        <!-- Content -->
+        <div class="slide-content active" data-content="0">
+            <h1 class="title">Kyochi Foot Reflexology</h1>
+            <p class="subtitle">Ancient Healing, Modern Wellness</p>
+            <blockquote class="quote">
+                Experience the therapeutic power of traditional foot reflexology for complete mind-body balance.
+            </blockquote>
+        </div>
+
+        <div class="slide-content" data-content="1">
+            <h1 class="title">Therapeutic Treatments</h1>
+            <p class="subtitle">Healing Through Touch</p>
+            <blockquote class="quote">
+                Professional reflexology sessions targeting pressure points to promote natural healing and relaxation.
+            </blockquote>
+        </div>
+
+        <div class="slide-content" data-content="2">
+            <h1 class="title">Personalized Sessions</h1>
+            <p class="subtitle">Tailored to Your Wellness</p>
+            <blockquote class="quote">
+                Custom treatment plans designed to address your specific health concerns and wellness goals.
+            </blockquote>
+        </div>
+
+        <div class="slide-content" data-content="3">
+            <h1 class="title">Certified Practitioners</h1>
+            <p class="subtitle">Expert Care & Comfort</p>
+            <blockquote class="quote">
+                Licensed reflexologists providing safe, effective treatments in a tranquil healing environment.
+            </blockquote>
+        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicators -->
+        <div class="indicators">
+            <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+            <button class="indicator" data-slide="3" aria-label="Go to slide 4"></button>
+        </div>
+    </section>
+
+    <section id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem, font-st">
+            About Us
+          </h2>
+          <p>
+            Holistic wellness center specializing in natural healing through
+            the art of foot reflexology, delivered by highly skilled visually
+            impaired therapists. We provide a wide range of therapies tailored
+            to address specific concerns, including stress relief, body
+            relaxation, foot acupressure therapy, chronic pain management, and
+            detoxification. <br /><br />
+            We believe in the body's innate ability to heal itself and adopt a
+            holistic approach to enhance this process. With a team of expert
+            therapists and a serene ambiance, we are dedicated to delivering
+            an exceptional therapeutic experience that promotes calmness,
+            balance, and rejuvenation.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="images/image1.webp" alt="Reflexology therapy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
         <h2 style="font-size: 2rem">Our Services</h2>
         <div class="services-grid">
-          <!-- Relaxation Card -->
           <div class="service-card">
             <div class="service-image">
               <img src="images/image1.webp" alt="Relaxation service" />
@@ -253,7 +337,6 @@
             </div>
           </div>
 
-          <!-- De-stress Card -->
           <div class="service-card">
             <div class="service-image">
               <img src="images/de-stress.jpeg" alt="De-stress service" />
@@ -274,7 +357,6 @@
             </div>
           </div>
 
-          <!-- Chronic Pain Card -->
           <div class="service-card">
             <div class="service-image">
               <img src="images/chronic-pain.jpeg" alt="Chronic Pain service" />
@@ -295,7 +377,7 @@
             </div>
           </div>
 
-          <!-- Soul Serenity Card -->
+  
           <div class="service-card">
             <div class="service-image">
               <img
@@ -315,7 +397,7 @@
             </div>
           </div>
 
-          <!-- Reflexology for Detox Card -->
+    
           <div class="service-card">
             <div class="service-image">
               <img src="images/detox.jpg" alt="Reflexology for Detox service" />
@@ -332,7 +414,6 @@
             </div>
           </div>
 
-          <!-- Face Detox Reflexology -->
           <div class="service-card">
             <div class="service-image">
               <img
@@ -354,7 +435,6 @@
             </div>
           </div>
 
-          <!-- Little Feet Reflexology -->
           <div class="service-card">
             <div class="service-image">
               <img
@@ -376,7 +456,6 @@
             </div>
           </div>
 
-          <!-- Nasal Reflexology -->
           <div class="service-card">
             <div class="service-image">
               <img
@@ -400,7 +479,6 @@
             </div>
           </div>
 
-          <!-- Vita Flex Reflexology -->
           <div class="service-card">
             <div class="service-image">
               <img src="images/vita.jpeg" alt="Vita Flex Reflexology service" />
@@ -418,7 +496,7 @@
             </div>
           </div>
 
-          <!-- Femme Cycle Reflexology -->
+       
           <div class="service-card center-card">
             <div class="service-image">
               <img
@@ -531,9 +609,69 @@
         </div>
       </section>
 
-      <section id="gallery">
-        <h2 style="font-size: 2rem">Gallery</h2>
-      </section>
+          <div class="gallery-section">
+        <h2 class="gallery-title">Gallery</h2>
+        
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="gallery-item">
+                    <img src="/images/1.png" alt="Interior Design 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Modern Living Space</h3>
+                        <p>Contemporary design with elegant finishing touches that create a warm and inviting atmosphere.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/images/2.png" alt="Interior Design 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Luxury Bedroom</h3>
+                        <p>Sophisticated bedroom design featuring premium materials and thoughtful lighting solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/images/3.png" alt="Interior Design 3" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Kitchen Excellence</h3>
+                        <p>State-of-the-art kitchen design combining functionality with aesthetic appeal.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/images/4.png" alt="Interior Design 4" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Dining Experience</h3>
+                        <p>Elegant dining space designed for memorable gatherings and special occasions.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/images/1.png" alt="Interior Design 5" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Bathroom Sanctuary</h3>
+                        <p>Spa-like bathroom retreat with luxurious fixtures and calming ambiance.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=500&fit=crop" alt="Interior Design 6" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Office Space</h3>
+                        <p>Professional workspace designed for productivity and comfort with modern aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-nav prev" onclick="moveCarousel(-1)">‹</button>
+            <button class="carousel-nav next" onclick="moveCarousel(1)">›</button>
+            
+            <div class="progress-bar" id="progressBar"></div>
+            <div class="auto-scroll-indicator">Auto-scrolling enabled</div>
+        </div>
+        
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
 
       <section class="why-choose-us">
         <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
@@ -543,32 +681,32 @@
             <div class="feature-box">
                 <div class="icon">💆‍♂️</div>
                 <h3>Expert Therapists</h3>
-                <p>Skilled professionals with exceptional sensory abilities.</p>
+                <p class="q">Skilled professionals with exceptional sensory abilities.</p>
             </div>
             <div class="feature-box">
                 <div class="icon">❤️</div>
                 <h3>Empowering Lives</h3>
-                <p>Supporting visually impaired individuals through meaningful employment.</p>
+                <p class="q" >Supporting visually impaired individuals through meaningful employment.</p>
             </div>
             <div class="feature-box">
                 <div class="icon">🧘‍♀️</div>
                 <h3>Holistic Wellness</h3>
-                <p>Relaxing and revitalizing foot massage experiences.</p>
+                <p class="q">Relaxing and revitalizing foot massage experiences.</p>
             </div>
             <div class="feature-box">
                 <div class="icon">🌿</div>
                 <h3>Natural Techniques</h3>
-                <p>Traditional, chemical-free therapies rooted in ancient practices.</p>
+                <p class="q" >Traditional, chemical-free therapies rooted in ancient practices.</p>
             </div>
             <div class="feature-box">
                 <div class="icon">😊</div>
                 <h3>500+ Happy Clients</h3>
-                <p>Trusted by a growing community of wellness seekers.</p>
+                <p class="q" >Trusted by a growing community of wellness seekers.</p>
             </div>
             <div class="feature-box">
                 <div class="icon">📍</div>
                 <h3>Serving Urban India</h3>
-                <p>Now available in multiple cities with plans to expand.</p>
+                <p class="q" >Now available in multiple cities with plans to expand.</p>
             </div>
         </div>
     </section>
@@ -622,33 +760,276 @@
     </footer> 
 
   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-                  const hamburger = document.querySelector('.hamburger');
-                  const mobileMenu = document.querySelector('.mobile-menu');
-                  const closeMenu = document.querySelector('.close-menu');
-                  const overlay = document.querySelector('.overlay');
-                  
-                  // Open mobile menu
-                  hamburger.addEventListener('click', function() {
-                      mobileMenu.classList.add('active');
-                      overlay.classList.add('active');
-                      document.body.style.overflow = 'hidden';
-                  });
-                  
-                  // Close mobile menu
-                  closeMenu.addEventListener('click', function() {
-                      mobileMenu.classList.remove('active');
-                      overlay.classList.remove('active');
-                      document.body.style.overflow = 'auto';
-                  });
-                  
-                  // Close mobile menu when clicking overlay
-                  overlay.addEventListener('click', function() {
-                      mobileMenu.classList.remove('active');
-                      overlay.classList.remove('active');
-                      document.body.style.overflow = 'auto';
-                  });
-              });
-    </script>
+         class HeroSlider {
+            constructor() {
+                this.currentSlide = 0;
+                this.isAnimating = false;
+                this.slideTimeout = null;
+                this.totalSlides = 4;
+                
+                this.backgroundImages = document.querySelectorAll('.background-image');
+                this.slideContents = document.querySelectorAll('.slide-content');
+                this.indicators = document.querySelectorAll('.indicator');
+                
+                this.init();
+            }
+
+            init() {
+                // Add event listeners to indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Start auto-slide
+                this.startSlideTimer();
+            }
+
+            startSlideTimer() {
+                if (this.slideTimeout) {
+                    clearTimeout(this.slideTimeout);
+                }
+
+                this.slideTimeout = setTimeout(() => {
+                    this.nextSlide();
+                }, 5000);
+            }
+
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+                this.goToSlide(nextIndex);
+            }
+
+            goToSlide(index) {
+                if (this.currentSlide === index || this.isAnimating) return;
+
+                this.isAnimating = true;
+
+                // Add animating class
+                this.backgroundImages[this.currentSlide].classList.add('animating');
+                this.slideContents[this.currentSlide].classList.add('animating');
+                this.indicators.forEach(indicator => indicator.classList.add('animating'));
+
+                setTimeout(() => {
+                    // Remove active classes from current slide
+                    this.backgroundImages[this.currentSlide].classList.remove('active');
+                    this.slideContents[this.currentSlide].classList.remove('active');
+                    this.indicators[this.currentSlide].classList.remove('active');
+
+                    // Update current slide
+                    this.currentSlide = index;
+
+                    // Add active classes to new slide
+                    this.backgroundImages[this.currentSlide].classList.add('active');
+                    this.slideContents[this.currentSlide].classList.add('active');
+                    this.indicators[this.currentSlide].classList.add('active');
+
+                    // Remove animating classes
+                    this.backgroundImages.forEach(img => img.classList.remove('animating'));
+                    this.slideContents.forEach(content => content.classList.remove('animating'));
+                    this.indicators.forEach(indicator => indicator.classList.remove('animating'));
+
+                    this.isAnimating = false;
+
+                    // Restart timer
+                    this.startSlideTimer();
+                }, 1000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new HeroSlider();
+        });
+
+         const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMenu = document.querySelector('.close-menu');
+        const overlay = document.querySelector('.overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        overlay.addEventListener('click', closeMobileMenu);
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-links a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+                const track = document.getElementById('carouselTrack');
+        const progressBar = document.getElementById('progressBar');
+        const dotsContainer = document.getElementById('carouselDots');
+        const items = track.children;
+        const itemWidth = 430; // 400px + 30px margin
+        let currentIndex = 0;
+        let autoScrollInterval;
+        let progressInterval;
+        const autoScrollDelay = 4000; // 4 seconds
+
+        // Create dots
+        for (let i = 0; i < items.length; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateCarousel() {
+            const translateX = -currentIndex * itemWidth;
+            track.style.transform = `translateX(${translateX}px)`;
+            
+            // Update dots
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function moveCarousel(direction) {
+            currentIndex += direction;
+            
+            if (currentIndex >= items.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = items.length - 1;
+            }
+            
+            updateCarousel();
+            resetAutoScroll();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoScroll();
+        }
+
+        function startAutoScroll() {
+            let progress = 0;
+            
+            progressInterval = setInterval(() => {
+                progress += 1;
+                progressBar.style.width = `${(progress / (autoScrollDelay / 100)) * 100}%`;
+            }, 100);
+            
+            autoScrollInterval = setTimeout(() => {
+                moveCarousel(1);
+            }, autoScrollDelay);
+        }
+
+        function resetAutoScroll() {
+            clearTimeout(autoScrollInterval);
+            clearInterval(progressInterval);
+            progressBar.style.width = '0%';
+            startAutoScroll();
+        }
+
+        // Touch/Mouse drag functionality
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        track.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - track.offsetLeft;
+            scrollLeft = currentIndex * itemWidth;
+            track.style.cursor = 'grabbing';
+        });
+
+        track.addEventListener('mouseleave', () => {
+            isDown = false;
+            track.style.cursor = 'grab';
+        });
+
+        track.addEventListener('mouseup', (e) => {
+            isDown = false;
+            track.style.cursor = 'grab';
+            
+            const x = e.pageX - track.offsetLeft;
+            const walk = (x - startX) * 2;
+            
+            if (Math.abs(walk) > 50) {
+                if (walk > 0) {
+                    moveCarousel(-1);
+                } else {
+                    moveCarousel(1);
+                }
+            }
+        });
+
+        track.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+        });
+
+        // Touch events for mobile
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].pageX;
+        });
+
+        track.addEventListener('touchend', (e) => {
+            if (!startX) return;
+            const endX = e.changedTouches[0].pageX;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    moveCarousel(1);
+                } else {
+                    moveCarousel(-1);
+                }
+            }
+        });
+
+        // Pause auto-scroll on hover
+        track.addEventListener('mouseenter', () => {
+            clearTimeout(autoScrollInterval);
+            clearInterval(progressInterval);
+        });
+
+        track.addEventListener('mouseleave', () => {
+            resetAutoScroll();
+        });
+
+        // Initialize
+        updateCarousel();
+        startAutoScroll();
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                moveCarousel(-1);
+            } else if (e.key === 'ArrowRight') {
+                moveCarousel(1);
+            }
+        });
+
+
+  </script>
+
+
   </body>
 </html>
