@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-padding-top: 90px; /* adjust this to your navbar height */
+}
 
 :root {
   --font-cursive: "Allura", cursive;
@@ -1610,7 +1613,7 @@ section {
 }
 
 .gallery-section {
-  padding: 80px 20px;
+  padding: 50px 20px;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
